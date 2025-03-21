@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linxia National Grand Theater</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #d4c7b4;
+      color: #4a4a4a;
+      overflow-y: scroll;
+    }
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #ece2d0;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      padding: 40px;
+    }
+    h1, h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+    .image-container img {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>"Dome of the Flower" - Linxia National Grand Theater by DUTS Design in China</h1>
+  <div class="image-container">
+    <img src="exterior.jpg" alt="Theater Exterior">
+    <img src="second exterior.jpg" alt="Additional Exterior View">
+  </div>
+  <p>
+    Located in Linxia City, Gansu Province, China, the "Dome of the Flower" - Linxia National Grand Theater is a cultural landmark blending Islamic heritage and modern architecture. Covering 52,300 square meters with a height of 46 meters, it hosts performances, exhibitions, and community events.
+  </p>
+
+  <div class="section">
+    <h2>Architectural Design & Architect</h2>
+    <div class="image-container">
+      <img src="Dome Design.jpg" alt="Dome Design">
+      <img src="Architectural Details.jpg" alt="Architectural Details">
+    </div>
+    <p>
+      The theater was designed by DUTS Design, led by chief architect Ma Yansong. Inspired by the Sultan Qaboos Grand Mosque in Oman, Ma Yansong incorporated Islamic architectural elements such as intricate geometric patterns and a grand dome. DUTS Design is known for blending cultural symbolism with modern aesthetics, and the Linxia National Grand Theater is a testament to this philosophy.
+    </p>
+    <p>
+      Ma Yansong is an acclaimed Chinese architect and the founder of MAD Architects. His work often explores the relationship between nature and urbanism, emphasizing organic forms and cultural identity. In the Linxia project, his vision was to respect Linxia’s Islamic heritage while introducing modern design principles.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Construction & Materials</h2>
+    <div class="image-container">
+      <img src="Interior Design.jpg" alt="Interior Design">
+      <img src="Construction Process.png" alt="Construction Process">
+    </div>
+    <p>
+      The construction involved a steel frame, expansive glass panels, and a 90-meter-wide dome. The dome uses a welded cross-sectional steel beam system similar to Beijing’s Bird’s Nest, integrating the shell structure, curtain wall, and decorative elements. This approach optimized both material usage and structural strength. Natural light filters through the lattice facade, symbolizing transparency and strength.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Interior Layout</h2>
+    <p>
+      The theater has a seating capacity of 1,052 spectators, with 860 seats in the main auditorium and 192 in the balcony. The stage, shaped like the Chinese character "品" (pronounced "pǐn"), meaning "quality" or "product", features a 15-meter square platform, a 14-meter diameter revolving stage, and multiple electric lift stages to accommodate diverse performances. The character symbolizes refinement and excellence, aligning with the theater’s purpose.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Historical Context & Cultural Impact</h2>
+    <p>
+      Completed in 2019, the theater is a symbol of cultural identity for the Hui Muslim population while promoting cross-cultural dialogue. It serves as a cultural hub and supports local tourism and urban development. The fusion of traditional Islamic motifs and contemporary architecture embodies inclusivity and respect for Linxia’s heritage.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Tourism & Urban Development</h2>
+    <p>
+      The theater has elevated Linxia's reputation, boosted local businesses, and supported economic growth. Its presence has modernized the surrounding area, making it a vibrant cultural center and a significant driver of urban renewal.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Notable Events & Challenges</h2>
+    <div class="image-container">
+      <img src="Zhong Ling.avif" alt="Architect">
+      <img src="Event Snapshot.jpg" alt="Event Snapshot">
+    </div>
+    <p>
+      The theater has hosted international film festivals and cultural events, solidifying its role as a cultural exchange center. One of the primary challenges was balancing modernity with tradition during construction, ensuring the final design remained culturally respectful while employing advanced materials and technologies.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Structural Innovations</h2>
+    <p>
+      The dome's 90-meter diameter and intricate design required innovative engineering. The lattice steel framework emulates Islamic patterns while maintaining structural stability. This innovative approach allowed the architects to blend aesthetic appeal with functional durability, creating a landmark that is both visually stunning and structurally sound.
+    </p>
+  </div>
+
+</div>
+
+<script>
+  // Simple scroll animation effect using intersection observer
+  const sections = document.querySelectorAll('.section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0px)";
+        entry.target.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = "translateY(30px)";
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
